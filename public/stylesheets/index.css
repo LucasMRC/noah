@@ -1,0 +1,180 @@
+* {
+    color: white;
+    font-weight: 300;
+}
+
+html, body {
+    background-color: black;
+    font-family: Cormorant, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.main {
+    padding-top: 17rem;
+    min-height: 90vh;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+.video-div {
+    height: calc(100vh - 11rem);
+    overflow: hidden;
+    margin: 0 3rem;
+}
+
+.myVideo, .video-overlay {
+    width: 100%;
+}
+
+.myVideo {
+    position: relative;
+    bottom: 8rem;
+}
+
+.video-overlay {
+    height: calc(100vh - 17rem);
+    position: absolute;
+    top: 17rem;
+    width: 100%;
+    left: 0;
+    background-color: transparent;
+    display: flex;
+}
+
+.video-overlay>div {
+    width: 80%;
+    padding-bottom: 2rem;
+}
+
+.video-overlay h2 {
+    font-size: 8rem;
+    font-style: italic;
+    height: 8rem;
+    margin: 0;
+}
+
+.video-overlay button {
+    width: 60%;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: .1rem solid white;
+    border-radius: 1.3rem;
+    cursor: pointer;
+}
+
+.video-overlay button:focus {
+    outline: none;
+}
+
+.video-overlay a {
+    color: white;
+}
+
+.video-overlay a:hover {
+    text-decoration: none;
+}
+
+.subtitle {
+    margin-bottom: 2rem;
+    font-family: 'Great Vibes';
+    font-size: 3rem;
+}
+
+.marco>p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: justify;
+}
+
+.marco {
+    padding: 1.3rem;
+    border-radius: .4rem;
+    border: 1px solid #DAA520;
+}
+
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+
+    .myVideo {
+        bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+
+    .video-overlay, .video-div {
+        height: 35vh;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding-bottom: 0;
+    }
+
+    .main {
+        padding-top: 12rem;
+    }
+
+    .video-div {
+        margin: 0;
+    }
+
+    .myVideo {
+        bottom: 12rem;
+    }
+
+    .video-overlay {
+        top: 12rem;
+    }
+    
+    
+    .video-overlay button {
+        font-size: 1.3rem;
+    }
+
+    .video-overlay h2 {
+        font-size: 5rem;
+        height: 5rem;
+    }
+
+    .video-overlay>div {
+        position: static;
+    }
+
+    .marco>p {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+    .video-div, .video-overlay {
+        height: 100vh;
+        margin: 0;
+    }
+
+    .myVideo {
+        position: static;
+    }
+
+    .myVideo, .video-overlay>div {
+        position: static;
+    }
+}
+

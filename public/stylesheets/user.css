@@ -1,0 +1,151 @@
+* {
+    color: white;
+    font-weight: 300;
+}
+
+html,
+body {
+    background-color: black;
+    font-family: Cormorant, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 88vh;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+.main {
+    padding-top: 18rem;
+    min-height: 88vh;
+    margin: 0 8rem;
+}
+
+.greeting {
+    margin: 5rem;
+}
+
+h1, h2 {
+    letter-spacing: .1rem;
+}
+
+.upload-form {
+    width: 20rem;
+    margin: 3rem auto;
+}
+
+.upload-form img {
+    width: inherit;
+}
+
+.user-form input,
+.upload-form input,
+.upload-form select,
+.upload-form option,
+.upload-form label {
+    width: 100%;
+    display: block;
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: .3rem;
+    padding: .5rem;
+    background-color: black;
+    margin-top: 1rem;
+    color: #afafaf;
+    letter-spacing: .1rem;
+}
+
+button.back {
+    background-color: transparent;
+    padding: .5rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+button.back a {
+    color: white;
+}
+
+button.back a {
+    text-decoration: none;
+}
+
+.upload-form>select>option {
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+}
+
+input:focus,
+select:focus,
+button:focus,
+option:focus {
+    outline: none;
+}
+
+.user-form input[type="text"],
+input[type="password"] {
+    width: 50%;
+}
+
+.user-form input[type="submit"] {
+    width: 25%;
+}
+
+.choose-path {
+    margin: 2rem 0.3rem 0;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: .3rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+.choose-path a {
+    color: white;
+}
+
+.choose-path a:hover,
+.choose-path:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    .main {
+        padding-top: 12rem;
+        margin: 0;
+    }
+
+    .greeting {
+        margin: 0;
+    }
+
+}
+
+@media screen and (orientation: landscape) and (max-height: 480px) {
+
+    .main {
+        padding-top: 18rem;
+        margin: 0;
+    }
+
+    .greeting {
+        margin: 0;
+    }
+
+}

@@ -1,0 +1,251 @@
+* {
+    font-weight: 300;
+}
+
+html, body {
+    background-color: #fff;
+    font-family: Cormorant, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+html {
+    height: 100%;
+}
+
+nav.navbar {
+    box-shadow: 0 0.5rem .5rem grey;
+}
+
+.main {
+    min-height: 90vh;
+    margin-left: 4rem;
+    padding-top: 20rem;
+}
+
+.sidebar {
+    margin-right: 2rem;
+}
+
+.sidebar-title {
+    color: #000;
+    font-family: 'Great Vibes';
+    font-size: 2.3rem;
+}
+
+.sidebar ul {
+    width: 11rem;
+}
+
+.category-item {
+    list-style-type: none;
+    margin-top: .2rem;
+    height: 3.5rem;
+    border-bottom: .05rem solid #a5a5a587;
+    border-radius: .1rem;
+    padding: .75rem 0;
+    transition: background-color 200ms;
+    cursor: pointer;
+}
+
+.category-item>a {
+    text-decoration: none;
+    color: #000;
+    line-height: 2rem;
+    letter-spacing: .1rem;
+    transition: font-weight 200ms color 200ms;
+}
+
+.category-item i.fas.fa-angle-right {
+    top: 0;
+    left: .3rem;
+    float: none;
+}
+
+.category-item:hover i.fas.fa-angle-right {
+    top: .2rem;
+}
+
+.category-item:hover {
+    background-color: #000000d1;
+}
+
+.category-item:hover i.fas.fa-angle-right {
+    display: inline-block;
+}
+
+.category-item:hover>a, .category-item:hover i.fas.fa-angle-right, a:not([href]):focus, a:not([href]):not([tabindex]):hover {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #DAA520;
+}
+
+#remove {
+    font-size: 1.3rem;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.each-menu {
+    display: none;
+    position: relative;
+    z-index: 2000;
+    border: .04rem solid #8888883d;
+    border-radius: .2rem;
+    padding: 0 .3rem .2rem;
+    background-color: #fff;
+    left: 10.9rem;
+    bottom: 2.98rem;
+}
+
+.card {
+    height: 18rem;
+    width: 19%;
+    min-width: 10rem;
+    float: left;
+    overflow: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.card:hover {
+    border: 1px solid #80808061;
+}
+
+.img-top-container {
+    height: 7rem;
+    overflow: hidden;
+}
+
+.card-body {
+}
+
+.card-buttons {
+    justify-content: flex-end;
+}
+
+.card-buttons .btn {
+    border: .05rem solid grey;
+    margin: 0 .3rem 1rem;
+    color: #484848;
+}
+
+.card-buttons .btn:focus {
+    box-shadow: none;
+}
+
+.clicked-card {
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    max-width: 57vh;
+}
+
+.clicked-img-top {
+    width: 80%;
+}
+
+.widget-close {
+    border: none;
+    background: transparent;
+    font-size: 1.7rem;
+    margin: 1rem auto;
+    width: 50%;
+    cursor: pointer;
+}
+
+.widget-close:focus {
+    outline: none;
+}
+
+.card-widget {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 200ms, background-color 200ms;
+}
+
+.cents {
+    font-size: 1rem;
+    position: relative;
+    bottom: .2rem;
+}
+
+footer.footer {
+    box-shadow: 0 0 0.5rem 0.23em
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding-bottom: 0;
+    }
+
+    .main {
+        padding-top: 15rem;
+        margin: 0 4rem;
+    }
+
+    .mobile-column {
+        -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column
+    }
+
+    .sidebar {
+        margin: 0;
+    }
+
+    .sidebar ul {
+        width: 100%;
+    }
+    
+    #products-grid {
+        min-height: 50vh;
+    }
+    
+    .img-top-container {
+        height: 10rem;
+    }
+
+    .each-menu {
+    position: relative;
+    left: 0;
+    top: 1rem;
+    background-color: #fbeeee;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+    .each-menu {
+        position: relative;
+        background-color: white;
+        left: 10.8rem;
+    }
+
+}

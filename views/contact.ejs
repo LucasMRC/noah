@@ -1,0 +1,42 @@
+    <% include partials/header %>
+            <title>Contacto - NOAH</title>
+            <link href="/stylesheets/contact.css" rel="stylesheet">
+  
+    <% include partials/nav %>
+
+            <div class="main">
+                <div class="contact mt-5">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 mb-2">
+                            <div class="row">
+                                <div class="col-12 col-xl-6">
+                                    <p class="contact-p"><i class="contact-icon fas fa-phone-square"></i> <a href="tel:+5493534239028">3534239028</a></p>
+                                    <p class="contact-p"><i class="contact-icon fas fa-at"></i><a href="mailto:noahjoyas@gmail.com">noahjoyas@gmail.com</a></p>
+                                    <p class="contact-p"><i class="contact-icon fas fa-map-marker-alt"></i> Córdoba 142, Planta Alta</p>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <p class="d-flex contact-p"><i class="contact-icon fab fa-facebook-square"></i><a href="https://facebook.com/Noahjoyas" target="_blank">Seguinos en Facebook</a></p>
+                                    <p class="d-flex contact-p"><i class="contact-icon fab fa-instagram"></i><a href="https://instagram.com/Noahjoyas" target="_blank">Seguinos en Instagram</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-2">
+                            <h3>Envíanos un mensaje:</h3>
+                            <form id="contact-form" action="/contacto" method="POST">
+                                <fieldset>
+                                    <input type="text" name="name" placeholder="Nombre" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="email" name="email" placeholder="Correo" required>
+                                </fieldset>
+                                <fieldset>
+                                    <textarea rows="7" name="message" placeholder="Mensaje"></textarea>
+                                </fieldset>
+                                <input type="submit" value="Enviar Mensaje">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <% include partials/footer %>

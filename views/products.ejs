@@ -1,0 +1,110 @@
+    <% include partials/header %>           
+           
+            <title>Productos - NOAH</title>
+            <link href="/stylesheets/products.css" rel="stylesheet">
+            
+    <% include partials/nav %>
+                            
+            <div class="main">
+                <div class="d-flex mobile-column">
+                    <div class="sidebar text-center">
+                        <h3 class="sidebar-title text-center">Catálogo</h3>
+                        <ul class="category text-center mt-5 p-0">
+                            <li class="category-title category-item">
+                                <a>Anillos</a>
+                                <ul class="each-menu category text-center">
+                                    <li data-key="letter-ring" class="data category-item">
+                                        <a  href="#">Iniciales</a>
+                                    </li>
+                                    <li data-key="stone-ring" class="data category-item">
+                                        <a href="#">Piedras</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="category-title category-item">
+                                <a>Pulseras</a>
+                                <ul class="each-menu category text-center">
+                                    <li data-key="letter-bracelet" class="data category-item">
+                                        <a href="#">Iniciales</a>
+                                    </li>
+                                    <li data-key="stone-bracelet" class="data category-item">
+                                        <a href="#">Piedras</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li  data-key="earrings" class="data category-item">
+                                <a href="#">Aros</a>
+                            </li>
+                            <li class="category-title category-item">
+                                <a>Colgantes</a>
+                                <ul class="each-menu category text-center">
+                                    <li data-key="letter-necklace" class="data category-item">
+                                        <a href="#">Iniciales</a>
+                                    </li>
+                                    <li data-key="name-necklace" class="data category-item">
+                                        <a href="#">Nombres</a>
+                                    </li>
+                                    <li data-key="stone-necklace" class="data category-item">
+                                        <a href="#">Piedras</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="category-title category-item">
+                                <a>Piedras</a>
+                                <ul class="each-menu category text-center">
+                                    <li data-key="rhodochrosite-stone" class="data category-item">
+                                        <a href="#">Rodocrosita</a>
+                                    </li>
+                                    <li data-key="onix-stone" class="data category-item">
+                                        <a href="#">Onix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="category-item">
+                                <a id="set" href="#">Conjuntos</a>
+                            </li>
+                            <li class="category-item">
+                                <a id="exclusive.products" href="#">Productos Exclusivos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="products-grid" class="grid">
+                        
+                            <% products.forEach(product => { %>
+                                
+                                    <div data-key="<%= product.type %>" class="card p-2 m-1 d-none">
+                                        <div class="img-top-container mt-3">
+                                            <img class="card-img-top mx-auto" src="<%= product.image %>" alt="Card image cap">
+                                        </div>
+                                        <div class="card-body">
+                                            <p><%= product.description %></p>
+                                            <p>$ <%= product.price %><span class="cents">00</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-widget d-none">
+                                        <div class="clicked-card px-4 pt-4 pb-0 m-1">
+                                            <img class="clicked-img-top mx-auto my-5" src="<%= product.image %>" alt="">
+                                            <button class="widget-close">Volver</button>
+                                            
+                                        <% if (currentUser) { %>
+                                        
+                                            <div class="card-buttons d-flex">
+                                                    <button class="btn"><a href="/editar/<%= product._id %>"><i class="fas fa-edit"></i></a></button>
+                                                </form>
+                                                <form action="/productos/<%= product._id %>?_method=DELETE" method="POST">
+                                                    <button type="submit" class="btn"><i class="fas fa-trash-alt"></i></button>
+                                                </form>
+                                            </div>
+                                            
+                                        <% } %>
+                                        
+                                        </div>
+                                    </div>
+                                    
+                            <% }) %>
+
+                    </div>
+                </div>
+            </div>
+
+            <% include partials/footer %>

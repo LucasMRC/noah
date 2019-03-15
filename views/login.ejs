@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+            <title>Ingresa a tu Cuenta - NOAH</title>
+            <link href="/stylesheets/user.css" rel="stylesheet">
+
+
+<% include partials/nav %>
+
+            <div class="container">
+                <div class="main">
+                    <div class="greeting">
+                        <h1>Noé, ¿sos vos?</h1>
+                        <h2>Si es así, ingresá tu usuario y contraseña</h2>
+                        <form class="user-form" action="./ingresar" method="POST">
+                            <input type="text" name="username" placeholder="Usuario">
+                            <input type="password" name="password" placeholder="Contraseña">
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+<% include partials/footer %>

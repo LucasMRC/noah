@@ -1,0 +1,156 @@
+nav>* {
+    color: #fff;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
+    height: 17rem;
+    background-color: #000;
+    display: block;
+}
+
+.nav-social {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.nav-social>a {
+    color: white;
+}
+
+.noah-logo {
+    width: 31%;
+}
+
+.header>h3 {
+    font-size: 2.75rem;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.header>p {
+    margin-bottom: .25rem;
+}
+
+.navbar .header {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.nav-menu {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar-toggler {
+    line-height: 2;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-collapse {
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+.navbar-collapse.show, .navbar-collapse.collapsing {
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: inline-block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.nav-item a {
+    display: block;
+    text-transform: uppercase;
+    padding: 10px 0 3px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: .3rem;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-item {
+    padding: 10px 20px 5px !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #f3f3f3;
+}
+
+.dropdown-menu {
+    left: 18%;
+    top: 70%;
+    background-color: black;
+    border-radius: .5rem;
+}
+
+.clearfix {
+    border: .03rem solid #DAA520;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.underline{
+    opacity: 0;
+    border: .03rem solid #DAA520;
+    margin: 0 auto 15px;
+    width: 10%;
+    transition: opacity 500ms, width 500ms;
+    transition-timing-function: ease;
+}
+
+.alert-container {
+    position: absolute;
+    z-index: 6000;
+    width: 100%;
+    top: 17rem;
+    opacity: .7;
+}
+
+.alert-container .container {
+    background-color: white;
+    padding: 0;
+    border-radius: .25rem}
+
+.alert-danger {
+    background-color: #b76169;
+    border: none;
+    color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-item {
+        width: 194px;
+    }
+}
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        height: 11rem;
+    }
+
+    .header>h3 {
+        font-size: 1.3rem;
+    }
+
+    .nav-social>a {
+        display: block;
+    }
+}
