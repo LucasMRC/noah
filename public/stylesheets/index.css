@@ -4,6 +4,10 @@
 }
 
 html, body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .0635rem;
     background-color: black;
     font-family: Cormorant, serif;
     margin: 0;

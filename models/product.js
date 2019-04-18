@@ -3,10 +3,14 @@ const mongoose = require('mongoose');
 // Product Schema
 
 let productSchema = new mongoose.Schema({
-  image: String,
+  image: {
+    url: String,
+    public_id: String
+  },
   description: String,
   serial: String,
-  price: Number,
+  minorPrice: Number,
+  mayorPrice: Number,
   type: String
 });
 

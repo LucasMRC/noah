@@ -1,36 +1,9 @@
-// Nav links underline effect
-$('.nav-item').hover(
-  function () {
-    $(this)
-      .find('hr')
-      .css({ opacity: '1', width: '30%' });
-  },
-  function () {
-    $(this)
-      .find('hr')
-      .css({ opacity: '0', width: '10%' });
-  }
-);
-
-// Check device for product tab on nav menu
-
-if (window.innerWidth > 1024) {
-  // if pc: open products menu on hover
-  $('.dropdown').hover(
-    function () {
-      $('.dropdown-menu').show(200, 'swing');
-    },
-    function () {
-      $('.dropdown-menu')
-        .clearQueue()
-        .css('display', 'none');
-    }
-  );
-} else {
-  // else products menu not displaying
-  $('.dropdown-menu').css('display', 'none');
-}
-
+$('#menu-open').click(() => {
+  $('.menu-display').css('right', '13.5rem');
+});
+$('#menu-close').click(() => {
+  $('.menu-display').css('right', '36.5rem');
+});
 // Check device for category products menu
 
 if (window.innerWidth > 1024) {
