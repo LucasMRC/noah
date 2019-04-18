@@ -1,3 +1,44 @@
 <% layout('layouts/boilerplate') -%>
 
-<h1>This is the products/new page</h1>
+<h1>Nuevo Producto</h1>
+
+<form action="/productos/nuevo" method="POST" enctype="multipart/form-data">
+	<div>
+
+		<input type="file" name="image" accept="images/*">
+	</div>
+
+	<div>
+		<input type="text" name="product[serial]" placeholder="Código de serie">
+	</div>
+
+	<div>
+		<input type="text" name="product[minorPrice]" placeholder="Precio Minorista">
+	</div>
+
+	<div>
+		<input type="text" name="product[mayorPrice]" placeholder="Precio Mayorista">
+	</div>
+
+	<div>
+		<select name="product[type]">
+			<option value="" hidden selected>Tipo</option>
+            <option value="stone-ring">Anillo de Piedra</option>
+            <option value="letter-ring">Anillo con Inicial</option>
+            <option value="letter-bracelet">Pulsera de Piedra</option>
+            <option value="stone-bracelet">Pulsera con Inicial</option>
+            <option value="earring">Aro</option>
+            <option value="stone-necklace">Colgante de Piedra</option>
+            <option value="letter-necklace">Colgante con Inicial</option>
+            <option value="name-necklace">Colgante con Nombre</option>
+            <option value="rhodochrosite-stone">Piedra: Rodocrosita</option>
+            <option value="onix-stone">Piedra: Onix</option>
+		</select>
+	</div>
+
+	<div>
+		<textarea name="product[description]" placeholder="Descripción"></textarea>
+	</div>
+
+	<input type="submit" value="Crear">
+</form>

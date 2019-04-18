@@ -4,7 +4,6 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const { asyncErrorHandler } = require('../middleware');
 const {
-  productIndex,
   productNew,
   productCreate,
   // productShow,
@@ -12,10 +11,6 @@ const {
   productUpdate,
   productDestroy
 } = require('../controllers/products');
-
-// PRODUCTS ROUTE
-
-router.get('/', asyncErrorHandler(productIndex));
 
 // NEW PRODUCT FORM ROUTE
 
@@ -31,7 +26,7 @@ router.get('/:id/editar', asyncErrorHandler(productEdit));
 
 // UPDATE PRODUCT ROUTE
 
-router.put('/:id', asyncErrorHandler(productUpdate));
+router.put('/:id', upload.single('image'), asyncErrorHandler(productUpdate));
 
 // DESTROY PRODUCT ROUTE
 

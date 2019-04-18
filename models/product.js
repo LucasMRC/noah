@@ -9,8 +9,8 @@ let productSchema = new mongoose.Schema({
   },
   description: String,
   serial: String,
-  minorPrice: Number,
-  mayorPrice: Number,
+  minorPrice: String,
+  mayorPrice: String,
   type: String
 });
 

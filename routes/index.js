@@ -8,10 +8,11 @@ const {
   getLoginForm,
   postLogin
 } = require('../controllers');
+const { asyncErrorHandler } = require('../middleware');
 
 // INDEX ROUTE
 
-router.get('/', getIndex);
+router.get('/', asyncErrorHandler(getIndex));
 
 // NEWSLETTER POST ROUTE
 
