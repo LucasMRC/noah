@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate') -%>
 
-<h1>This is the index page</h1>
+<h1>Esta es la página de inicio</h1>
 
 <% products.forEach(product => { %>
 	<div>
@@ -12,10 +12,12 @@
 			<li><%= product.mayorPrice %></li>
 		</ul>
 	</div>
-	<form action="/productos/<%= product._id %>?_method=DELETE" method="POST">
-		<button>Delete</button>	
-	</form>
-	<a href="/productos/<%= product._id %>/editar">
-		<button>Editar</button>
-	</a>
+	<% if (currentUser) { %>
+		<form action="/productos/<%= product._id %>?_method=DELETE" method="POST">
+			<button>Delete</button>	
+		</form>
+		<a href="/productos/<%= product._id %>/editar">
+			<button>Editar</button>
+		</a>
+	<% }; %>
 <% }); %>
